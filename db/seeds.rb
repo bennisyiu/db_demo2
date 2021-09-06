@@ -38,18 +38,19 @@ puts "#{teachers.length()} teachers have been created!"
 
 names = ["Scratch", "ScratchJr", "App Inventor", "Front End Programming",  "Python", "Minecraft"]
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+times = ["09:00", "11:00", "12:00", "13:30", "14:00", "15:30", "16:00"]
 
 stud_id_arr = Student.all.pluck(:id)
 t_id_arr = Teacher.all.pluck(:id)
 
 courses = [
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
-  { name: names.sample, day: days.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
+  { name: names.sample, day: days.sample, time: times.sample, student_id: stud_id_arr.sample, teacher_id: t_id_arr.sample },
 ]
 
 Course.create!(courses)

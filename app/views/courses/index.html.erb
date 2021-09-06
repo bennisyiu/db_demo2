@@ -1,8 +1,9 @@
 <h1>All 1:1 Classes</h1>
-<% @courses.each do |course| %>
-  <div class="course-card col-xs-12 col-sm-4">
-    <h4>Class: <%= course.name %></h4>
+<% @courses.each_with_index do |course, index| %>
+  <div>
+    <h4>Class #<%= index+1 %> - <%= course.name %></h4>
     <p>Day: <%= course.day %></p>
+    <p>Time: <%= course.time %></p>
     <p>Student: <%=course.student.first_name %> <%=course.student.last_name %> (ID: <%=course.student_id %>)</p>
     <p>Teacher: <%=course.teacher.first_name %> <%=course.teacher.last_name %> (ID: <%=course.teacher_id %>)</p>
     <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
