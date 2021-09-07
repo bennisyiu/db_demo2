@@ -1,14 +1,38 @@
-<h1>All 1:1 Classes</h1>
-<% @courses.each_with_index do |course, index| %>
-  <div>
-    <h4>Class #<%= index+1 %> - <%= course.name %></h4>
-    <p>Day: <%= course.day %></p>
-    <p>Time: <%= course.time %></p>
-    <p>Student: <%=course.student.first_name %> <%=course.student.last_name %> (ID: <%=course.student_id %>)</p>
-    <p>Teacher: <%=course.teacher.first_name %> <%=course.teacher.last_name %> (ID: <%=course.teacher_id %>)</p>
-    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
-    <br>
+
+
+<!-- minecraft = https://bit.ly/2X1PU9e
+app inv = https://bit.ly/2WZ4u1b
+python: https://bit.ly/3yO40YY
+scratch: https://bit.ly/3yQL8sn
+scratchJr: https://bit.ly/3tjTabX
+front end: https://bit.ly/3DUcIZ9
+preface coding: https://bit.ly/3DSHZfd -->
+
+<div class="container">
+  <h1>All 1:1 Classes</h1>
+  <br>
+  <div class="row">
+    <% @courses.each_with_index do |course, index| %>
+      <div class="col-xs-12 col-sm-4 ">
+        <h4>Class #<%= index+1 %> - <%= course.name %></h4>
+        <p>Day: <%= course.day %></p>
+        <p>Time: <%= course.time %></p>
+        <p>Student: <%=course.student.first_name %> <%=course.student.last_name %> (ID: <%=course.student_id %>)</p>
+        <p>Teacher: <%=course.teacher.first_name %> <%=course.teacher.last_name %> (ID: <%=course.teacher_id %>)</p>
+        <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+        <br>
+      </div>
+    <!-- add student & teacher details here -->
+    <% end %>
   </div>
-<!-- add student & teacher details here -->
-<% end  %>
+</div>
+
+<!--
+m
+["Scratch", "ScratchJr", "App Inventor", "Front End Programming",  "Python", "Minecraft"]
+
+switch
+
+
+-->
 
