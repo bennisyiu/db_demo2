@@ -12,26 +12,32 @@ Teacher.delete_all
 
 ## replace with new data from ClickUp
 
-# students = [
-#   { first_name: "Ellen", last_name: "Lau" },
-#   { first_name: "Bennis", last_name: "Yiu"} ,
-#   { first_name: "Spencer", last_name: "Cheung" },
-#   { first_name: "Vanessa", last_name: "Auyeung" },
-#   { first_name: "Billy", last_name: "Wong" },
-# ]
+students = [
+  { first_name: "phil", last_name: "mccracken" },
+  { first_name: "ben", last_name: "dover"},
+  { first_name: "anita", last_name: "dick" },
+  { first_name: "Ke", last_name: "Blob" },
+  { first_name: "Mike", last_name: "Hawk" },
+  { first_name: "kevin", last_name: "bacon" },
+  { first_name: "ceral", last_name: "morning" },
+  { first_name: "Ellen", last_name: "Lau" },
+]
 
 Student.create!(students)
 puts "#{students.length()} students have been created!"
 
 ## replace with new data from ClickUp
 
-# teachers = [
-#   { first_name: "Kelvin", last_name: "Chan", major: "Computer Science" },
-#   { first_name: "Mark", last_name: "Leung", major: "Engineering" },
-#   { first_name: "Queena", last_name: "Ling", major: "Education" },
-#   { first_name: "Tommie", last_name: "Lo", major: "Economics" },
-#   { first_name: "Kenneth", last_name: "She", major: "Computer Science" },
-# ]
+teachers = [
+  { first_name: "bennis", last_name: "yiu", major: "SQL" },
+  { first_name: "Taylor", last_name: "Swift", major: "Music" },
+  { first_name: "Ehsan", last_name: "Ayaz", major: "IT" },
+  { first_name: "Ken", last_name: "Li", major: "tolibudibudouchu" },
+  { first_name: "Kevin", last_name: "Lee", major: "Soci fucking ology" },
+  { first_name: "Mark", last_name: "Liang", major: "dropout" },
+  { first_name: "ben", last_name: "Yiu", major: "rubyonrails" },
+  { first_name: "my", last_name: "stomach", major: "eating" },
+]
 
 Teacher.create!(teachers)
 puts "#{teachers.length()} teachers have been created!"

@@ -1,7 +1,14 @@
-<div>
-  <%= form_tag(new_student_path, :method => "post") do %>
-  <%= label_tag(:first_name, "student first name") %>
-  <%= text_field_tag(:first_name) %>
-  <%= submit_tag("Create") %>
-<% end %>
+<div class="container">
+  <h1>All Students</h1>
+  <br>
+  <div class="row">
+    <% @students.each_with_index do |student, index| %>
+      <div class="col-xs-12 col-sm-4 ">
+        <h4>No. <%= index+1 %> - <%= student.first_name %> <%= student.last_name %></h4>
+        <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+        <br>
+      </div>
+    <!-- add student & teacher details here -->
+    <% end %>
+  </div>
 </div>

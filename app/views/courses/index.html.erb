@@ -14,7 +14,7 @@ preface coding: https://bit.ly/3DSHZfd -->
   <div class="row">
     <% @courses.each_with_index do |course, index| %>
       <div class="col-xs-12 col-sm-4 ">
-        <h4>Class #<%= index+1 %> - <%= course.name %></h4>
+        <h4>Class #<%= index+1 %> - <%= course.name %> (ID: <%= course.id %>) </h4>
         <p>Day: <%= course.day %></p>
         <p>Time: <%= course.time %></p>
         <p>Student: <%=course.student.first_name %> <%=course.student.last_name %> (ID: <%=course.student_id %>)</p>
